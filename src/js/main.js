@@ -40,11 +40,26 @@
 						var id = $(e.target).attr('href');
 						modal = UIkit.modal(id);
 
-						$(id + '> .uk-modal-dialog').html($(data).find('#content'));
-
-						
+						$(id + '> .uk-modal-dialog .content-modal').html($(data).find('#content'));
 						modal.show();
 					});	
+				});
+
+				$('.close-modal').click(function(e){
+					e.preventDefault();
+					modal.hide();
+				});
+
+				$('.eye').click(function(e){
+					e.preventDefault();
+					var project = $(this).parent();
+					if($(project).hasClass('visto')){
+						$(project).removeClass('visto');
+						$(project).find('.visto').hide();
+					}else{
+						$(project).addClass('visto');
+						$(project).find('.visto').show();
+					}
 				});
 				// $('.uk-modal').on({
 				// 	'show.uk.modal': function(e){

@@ -14,7 +14,7 @@ global $string_domain;?>
 					<?php } ?>
 		</ul>
 
-		<div id="content-grid" class="uk-grid uk-grid-width-small-1-2 uk-grid-width-medium-1-4" data-uk-grid="{gutter: 20, controls: '#categories-filter'}">
+		<div id="content-grid" class="uk-grid uk-grid-width-1-2 uk-grid-width-small-1-4 uk-grid-width-medium-1-5" data-uk-grid="{gutter: 40, controls: '#categories-filter'}">
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); 
 
@@ -30,13 +30,20 @@ global $string_domain;?>
 
 					<!-- This is the modal -->
 					<div id="project-<?php echo $post->ID; ?>" class="uk-modal">
-						<div class="uk-modal-dialog uk-modal-dialog-large">
-							<a href="" class="uk-modal-close uk-close uk-close-alt"></a>
+						<div class="uk-modal-dialog uk-modal-dialog-large uk-overflow-container">
+							<a href="#" class="close-modal"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/close.png"></a>
+							<div class="content-modal">
+
+							</div>
 						</div>
 					</div>
 
-					<a href="#" class="close"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/closi.svg"></a>
+					<a href="#" class="eye" title="<?php _e('Já viste este?','ip');?>">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/eye.png">
+						</a>
 					<?php echo get_the_post_thumbnail($post->ID,'img-400');?>
+
+					<div class="visto hide"></div>
 				</div>
 
 			

@@ -1,0 +1,28 @@
+{
+  "name": "brief-starter-uikit_wp",
+  "version": "1",
+  "authors": [
+    "Ruben Costa <ruben@brief.pt>"
+  ],
+  "description": "Brief Start Theme: Bower - Gulp - Bones - UiKit - Wordpress",
+  "main": "gulpfile.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "brief",
+    "starter",
+    "theme"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "uikit": "^2.24.3"
+  }
+}

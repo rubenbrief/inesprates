@@ -1,0 +1,43 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				".gitignore",
+				"CHANGELOG.md"
+			],
+			"folder_exclude_patterns":
+			[
+				".svn",
+				".git",
+				".hg",
+				"CVS",
+				"tmp/*",
+				"src/bower_components",
+				"assets/",
+				"src/img",
+				"src/node_modules"
+			],
+			"path": "."
+		},
+		{
+			"path": "assets"
+		},
+		{
+			"path": "library"
+		},
+		{
+			"path": "post-formats"
+		},
+		{
+			"path": "src"
+		}
+	],
+	"settings":
+	{
+		"tab_size": 2,
+		"translate_tabs_to_spaces": true,
+		"trim_trailing_white_space_on_save": true
+	}
+}

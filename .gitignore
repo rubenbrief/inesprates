@@ -1,0 +1,34 @@
+############
+## OSes
+############
+
+[Tt]humbs.db
+[Dd]esktop.ini
+*.DS_Store
+.DS_Store?
+
+
+############
+## Misc
+############
+
+src/node_modules/
+src/bower_components/
+bin/
+tmp/
+*.tmp
+*.bak
+*.log
+*.[Cc]ache
+*.cpr
+*.orig
+*.php.in
+.idea/
+temp/
+._*
+.Trashes
+
+.svn
+
+*.codekit
+*.scssc

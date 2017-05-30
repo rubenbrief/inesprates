@@ -6,6 +6,7 @@
 		common: {
 		    init: function() {
 		     	// JS here
+				
 		    },
 		    finalize: function() { }
 		},
@@ -36,13 +37,24 @@
 				$('.open-project').click(function(e){
 					e.preventDefault();
 
-					$.get( $(e.target).attr('data-anchor') , function( data ) {
+					var anchor = $(e.target).attr('data-anchor');
+
+					$.get( anchor , function( data ) {
 						var id = $(e.target).attr('href');
 						modal = UIkit.modal(id);
 
 						$(id + '> .uk-modal-dialog .content-modal').html($(data).find('#content'));
 						modal.show();
+
+						window.history.pushState({href: anchor}, '', anchor);
+
+						modal.on({
+							'hide.uk.modal': function(){
+								window.history.back();
+							}
+						})
 					});	
+
 				});
 
 				$('.close-modal').click(function(e){
@@ -75,9 +87,14 @@
 		    }
 		},
 	  	// About page
-	  	about: {
+	  	page: {
 		    init: function() {
 		      	// JS here
+				$('.ver-projetos').click(function(e){
+					  e.preventDefault();
+					  console.log('cl');
+					  window.location.replace($(this).attr('data-home'));
+				  })
 		    }
 	  	}
 	};

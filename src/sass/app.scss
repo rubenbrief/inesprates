@@ -403,11 +403,25 @@ body{
     font-size:1.1rem;
 }
 
+p, span{
+    &::selection{
+        background-color: rgba(254,216,136,.7);
+    }
+    outline: 0;
+    font-family: 'Space Mono', monospace;
+    color:rgba(0,0,0,0.6);
+    color:black;
+}
+
 a,a:hover,a:focus {
     text-decoration: none;
     outline: 0;
     font-family: 'Space Mono', monospace;
     color:rgba(0,0,0,0.6);
+    &::selection{
+        background-color: rgba(254,216,136,.7);
+        color:black;
+    }
 }
 a:hover{
     color:black;
@@ -417,6 +431,11 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
     font-family: 'Space Mono', monospace;
     margin-top:20px;
     margin-bottom:30px;
+    &::selection{
+        background-color: rgba(254,216,136,.7);
+        color:black;
+    }
+
 }
 
 strong{
@@ -443,8 +462,8 @@ footer{
 .close-modal{
     display: block;
     position: absolute;
-    right: 1%;
-    top:2%;
+    right:10px;
+    top:10px;
     width:30px;
 
     img{
@@ -477,7 +496,7 @@ footer{
         width:80%;
         height:80%;
         z-index: 30;
-        background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0,0,0,.7) 25px, rgba(0,0,0,.5) 40px);
+        background-image: repeating-linear-gradient(45deg, transparent, transparent 7px, rgba(0,0,0,.7) 8px, rgba(0,0,0,.5) 10px);
     }
 
     .open-project{
@@ -501,6 +520,10 @@ footer{
     margin-bottom:50px;
     li{
         display: inline-block;
+
+        a{
+            font-size: 1rem;
+        }
     }
 }
 
@@ -510,20 +533,49 @@ footer{
 
 .nav-menu{
     position: absolute;
-    top:5%;
-    right:5%;
+    top:20px;
+    right:20px;
     width: 100px;
+
+    .menu-item{
+        position: relative;
+        &:before{
+            content: url(../img/mandala.jpg);
+            position: absolute;
+            width: 20px;
+            top:50%;
+            left:-5px;
+            transform:translate(-100%, -50%);
+        }
+    }
+}
+
+.ver-projetos{
+    position: absolute;
+    top:20px;
+    left:20px;
+    width: 100px;
+
+    &:before{
+        content: url(../img/arrow.png);
+        position: absolute;
+        bottom:0px;
+        left:50%;
+        opacity: 0.7;
+        transform: translate(-50%,110%);
+    }
 }
 
 /* Effect 12: circle */
 .cl-effect-12 a::before,
 .cl-effect-12 a::after {
+    z-index: -1;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	width: 50px;
 	height: 50px;
-	border: 2px solid rgba(0,0,0,0.1);
+	border: 2px solid rgba(0,0,0,0.3);
 	border-radius: 50%;
 	content: '';
 	opacity: 0;
@@ -538,7 +590,7 @@ footer{
 .cl-effect-12 a::after {
 	width: 40px;
 	height: 40px;
-	border-width: 6px;
+	border-width: 0;
 	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
 	-moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
 	transform: translateX(-50%) translateY(-50%) scale(0.8);

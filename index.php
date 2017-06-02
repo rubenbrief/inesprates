@@ -31,7 +31,7 @@ global $string_domain;?>
 					<!-- This is the modal -->
 					<div id="project-<?php echo $post->ID; ?>" class="uk-modal">
 						<div class="uk-modal-dialog uk-modal-dialog-large uk-overflow-container">
-							<a href="#" class="close-modal"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/close.png"></a>
+							<a href="#" class="close-modal"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/close.svg"></a>
 							<div class="content-modal">
 
 							</div>

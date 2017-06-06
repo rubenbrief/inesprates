@@ -489,14 +489,20 @@ footer{
         }
     }
 
-    .visto{
-        position: absolute;
-        top:0;
-        left:20%;
-        width:80%;
-        height:80%;
-        z-index: 30;
-        background-image: repeating-linear-gradient(45deg, transparent, transparent 7px, rgba(0,0,0,.7) 8px, rgba(0,0,0,.5) 10px);
+    // .visto{
+    //     position: absolute;
+    //     top:0;
+    //     left:20%;
+    //     width:80%;
+    //     height:80%;
+    //     z-index: 30;
+    //     background-image: repeating-linear-gradient(45deg, transparent, transparent 7px, rgba(0,0,0,.7) 8px, rgba(0,0,0,.5) 10px);
+    // }
+
+    &.visto{
+        .projet-img{
+            border:2px solid grey;
+        }
     }
 
     .open-project{
@@ -520,6 +526,7 @@ footer{
     margin-bottom:50px;
     li{
         display: inline-block;
+        margin-right:20px;
 
         a{
             font-size: 1rem;
@@ -563,6 +570,14 @@ footer{
         left:50%;
         opacity: 0.7;
         transform: translate(-50%,110%);
+    }
+}
+
+.projet-img{
+    img{
+        &.visto{
+            border: 4px solid black;
+        }
     }
 }
 

@@ -38,6 +38,8 @@
 					e.preventDefault();
 
 					var anchor = $(e.target).attr('data-anchor');
+					
+					$(this).parent().addClass('visto');
 
 					$.get( anchor , function( data ) {
 						var id = $(e.target).attr('href');

@@ -32,6 +32,7 @@
 				// 	// shiftLayout remaining item elements
 				// 	.packery('shiftLayout');
 				// });
+				
 
 				//open projects
 				$('.open-project').click(function(e){

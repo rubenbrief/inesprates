@@ -527,6 +527,7 @@ footer{
     li{
         display: inline-block;
         margin-right:20px;
+        line-height: 30px;
 
         a{
             font-size: 1rem;
@@ -536,6 +537,16 @@ footer{
 
 .logo{
     height: 100px;
+
+    a{
+        padding-top:70px;
+        font-size:25px;
+        display: block;
+
+        @media(min-width:768px){
+            padding-top:30px;
+        }
+    }
 }
 
 .nav-menu{

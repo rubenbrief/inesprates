@@ -452,11 +452,16 @@ ul{
 }
 
 footer{
+    margin-top: 7px;
     padding-top: 7px;
-    position: relative;
+    position: absolute;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
+
+    p{
+        font-size: 11px;
+    }
 }
 
 .uk-modal-dialog{
@@ -578,14 +583,14 @@ footer{
     left:20px;
     width: 100px;
 
-    &:before{
-        content: url(../img/arrow.png);
-        position: absolute;
-        bottom:0px;
-        left:50%;
-        opacity: 0.7;
-        transform: translate(-50%,110%);
-    }
+    // &:before{
+    //     content: url(../img/arrow.png);
+    //     position: absolute;
+    //     bottom:0px;
+    //     left:50%;
+    //     opacity: 0.7;
+    //     transform: translate(-50%,110%);
+    // }
 }
 
 .projet-img{
@@ -594,6 +599,35 @@ footer{
             border: 4px solid black;
         }
     }
+}
+/* Effect 3: bottom line slides/fades in */
+.cl-effect-3 a {
+	padding: 8px 0;
+}
+
+.cl-effect-3 a::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: rgba(0,0,0,0.1);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.cl-effect-3 a:hover::after,
+.cl-effect-3 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
 }
 
 /* Effect 12: circle */

@@ -1,7 +1,7 @@
 <?php get_header();
 global $string_domain;?>
 	<div class="content uk-container uk-container-center" >
-		<ul id="categories-filter" class="categories-filter cl-effect-12">
+		<ul id="categories-filter" class="categories-filter cl-effect-3">
 			<li class="relative" data-uk-filter="">
 				<a href=""><?php _e('todos', 'ip'); ?></a></li>
 			<?php 

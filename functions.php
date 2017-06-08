@@ -433,4 +433,36 @@ function brief_increase_upload( $bytes )
     return 33554432; // 32 megabytes
 }
 
+
+
+
+/**
+ * Add theme support for infinite scroll.
+ *
+ * @uses add_theme_support
+ * @return void
+ */
+function ip_infinite_scroll_init() {
+    add_theme_support( 'infinite-scroll', array(
+        'footer'    => 'footer',
+        'type'           => 'scroll',
+        'footer_widgets' => false,
+        'container'      => 'content-grid',
+        'wrapper'        => false,
+        'render'         => 'show_work_item',
+        'posts_per_page' => 10
+    ) );
+}
+add_action( 'after_setup_theme', 'ip_infinite_scroll_init' );
+
+
+function show_work_item(){
+  while( have_posts() ) {
+    the_post();
+    get_template_part('post-formats/item','portfolio');
+  }
+}
+
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

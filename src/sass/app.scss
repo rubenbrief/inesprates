@@ -493,6 +493,8 @@ footer{
 
 .grid-item{
     position: relative;
+    overflow: hidden;
+    
     .eye{
         position: absolute;
         top:5px;

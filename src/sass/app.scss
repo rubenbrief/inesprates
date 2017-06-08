@@ -462,10 +462,8 @@ ul{
 }
 
 footer{
-    margin-top: 7px;
-    padding-top: 7px;
-    position: relative;
-    bottom: 0px;
+    position: absolute;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
 

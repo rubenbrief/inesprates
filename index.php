@@ -13,7 +13,7 @@ global $string_domain;?>
 					<?php } ?>
 		</ul>
 
-		<div id="content-grid" class="uk-grid uk-grid-width-1-2 uk-grid-width-small-1-4 uk-grid-width-medium-1-5" data-uk-grid="{gutter: 40, controls: '#categories-filter'}">
+		<div id="content-grid" class="uk-grid uk-grid-width-1-2 uk-grid-width-small-1-3 uk-grid-width-medium-1-4" data-uk-grid="{gutter: 40, controls: '#categories-filter'}">
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); 
 

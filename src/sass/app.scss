@@ -401,6 +401,8 @@ body{
     font-family: 'Space Mono', monospace;
     text-align: center;
     font-size:1.1rem;
+    position: relative;
+    height: 100%;
 }
 
 p, span{
@@ -462,7 +464,7 @@ ul{
 footer{
     margin-top: 7px;
     padding-top: 7px;
-    position: absolute;
+    position: relative;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);

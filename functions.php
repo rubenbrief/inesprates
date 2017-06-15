@@ -450,7 +450,7 @@ function ip_infinite_scroll_init() {
         'container'      => 'content-grid',
         'wrapper'        => false,
         // 'render'         => 'show_work_item',
-        'posts_per_page' => -1
+        'posts_per_page' => 5
     ) );
 }
 add_action( 'after_setup_theme', 'ip_infinite_scroll_init' );

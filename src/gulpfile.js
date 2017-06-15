@@ -8,7 +8,7 @@ gutil = require('gulp-util');
 sass = require('gulp-sass');
 
 // CHANGE THIS TO MATCH YOUR SITE URL
-siteUrl = "ip.local/";
+siteUrl = "iprates.local/";
 
 paths = {
   "scripts": {

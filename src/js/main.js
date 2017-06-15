@@ -65,17 +65,17 @@
 					modal.hide();
 				});
 
-				$('.eye').click(function(e){
-					e.preventDefault();
-					var project = $(this).parent();
-					if($(project).hasClass('visto')){
-						$(project).removeClass('visto');
-						$(project).find('.visto').hide();
-					}else{
-						$(project).addClass('visto');
-						$(project).find('.visto').show();
-					}
-				});
+				// $('.eye').click(function(e){
+				// 	e.preventDefault();
+				// 	var project = $(this).parent();
+				// 	if($(project).hasClass('visto')){
+				// 		$(project).removeClass('visto');
+				// 		$(project).find('.visto').hide();
+				// 	}else{
+				// 		$(project).addClass('visto');
+				// 		$(project).find('.visto').show();
+				// 	}
+				// });
 				// $('.uk-modal').on({
 				// 	'show.uk.modal': function(e){
 				// 		console.log("Modal is waiting.");

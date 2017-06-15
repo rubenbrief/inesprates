@@ -449,7 +449,7 @@ function ip_infinite_scroll_init() {
         'footer_widgets' => false,
         'container'      => 'content-grid',
         'wrapper'        => false,
-        // 'render'         => 'show_work_item',
+        'render'         => 'show_work_item',
         'posts_per_page' => 5
     ) );
 }
@@ -457,10 +457,12 @@ add_action( 'after_setup_theme', 'ip_infinite_scroll_init' );
 
 
 function show_work_item(){
-  while( have_posts() ) {
-    the_post();
-    get_template_part('post-formats/item','portfolio');
-  }
+  if(have_posts()): 
+    while( have_posts() ) {
+      the_post();
+      get_template_part('post-formats/item','portfolio');
+    }
+  endif;
 }
 
 

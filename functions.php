@@ -449,7 +449,7 @@ function ip_infinite_scroll_init() {
         'footer_widgets' => false,
         'container'      => 'content-grid',
         'wrapper'        => false,
-        'render'         => 'show_work_item',
+        // 'render'         => 'show_work_item',
         'posts_per_page' => 10
     ) );
 }

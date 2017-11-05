@@ -183,8 +183,6 @@ THEME SUPPORT
 // Adding WP 3+ Functions & Theme Support
 function bones_theme_support() {
 
-	global $string_domain;
-
 	// wp thumbnails (sizes handled in functions.php)
 	add_theme_support( 'post-thumbnails' );
 
@@ -228,8 +226,8 @@ function bones_theme_support() {
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
-			'main-nav' => __( 'The Main Menu', $string_domain ),   // main nav in header
-			'footer-links' => __( 'Footer Links', $string_domain ) // secondary nav in footer
+			'main-nav' => __( 'The Main Menu', 'ip' ),   // main nav in header
+			'footer-links' => __( 'Footer Links', 'ip' ) // secondary nav in footer
 		)
 	);
 
@@ -267,7 +265,7 @@ function bones_related_posts() {
 				<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
 			<?php endforeach; }
 		else { ?>
-			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', $string_domain ) . '</li>'; ?>
+			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'ip' ) . '</li>'; ?>
 		<?php }
 	}
 	wp_reset_postdata();
@@ -312,7 +310,7 @@ function bones_filter_ptags_on_images($content){
 function bones_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', $string_domain ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', $string_domain ) .'</a>';
+	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'ip' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'ip' ) .'</a>';
 }
 
 

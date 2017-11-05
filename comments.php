@@ -11,11 +11,11 @@ if ( post_password_required() ) {
 ?>
 
 <?php // You can start editing here.
-global $string_domain;?>
+?>
 
   <?php if ( have_comments() ) : ?>
 
-    <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', $string_domain ), __( '<span>One</span> Comment', $string_domain ), __( '<span>%</span> Comments', $string_domain ) );?></h3>
+    <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'ip' ), __( '<span>One</span> Comment', 'ip' ), __( '<span>%</span> Comments', 'ip' ) );?></h3>
 
     <section class="commentlist">
       <?php
@@ -25,7 +25,7 @@ global $string_domain;?>
           'avatar_size'       => 40,
           'callback'          => 'bones_comments',
           'type'              => 'all',
-          'reply_text'        => __('Reply', $string_domain),
+          'reply_text'        => __('Reply', 'ip'),
           'page'              => '',
           'per_page'          => '',
           'reverse_top_level' => null,
@@ -36,13 +36,13 @@ global $string_domain;?>
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
     	<nav class="navigation comment-navigation" role="navigation">
-      	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', $string_domain ) ); ?></div>
-      	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', $string_domain ) ); ?></div>
+      	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'ip' ) ); ?></div>
+      	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'ip' ) ); ?></div>
     	</nav>
     <?php endif; ?>
 
     <?php if ( ! comments_open() ) : ?>
-    	<p class="no-comments"><?php _e( 'Comments are closed.' , $string_domain ); ?></p>
+    	<p class="no-comments"><?php _e( 'Comments are closed.' , 'ip' ); ?></p>
     <?php endif; ?>
 
   <?php endif; ?>

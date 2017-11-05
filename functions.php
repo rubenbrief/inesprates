@@ -9,7 +9,7 @@ sidebars, comments, etc.
 */
 
 // //define theme domain for translation plugins:
-// $string_domain = 'example_website';
+// 'ip' = 'example_website';
 
 
 
@@ -26,13 +26,11 @@ Let's get everything up and running.
 
 function bones_ahoy() {
 
-  global $string_domain;
-
   //Allow editor style.
   add_editor_style( get_stylesheet_directory_uri() . '/assets/css/editor-style.css' );
 
   // let's get language support going, if you need it
-  load_theme_textdomain( $string_domain, get_template_directory() . '/library/translation' );
+  load_theme_textdomain( 'ip', get_template_directory() . '/library/translation' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
  // require_once( 'library/custom-post-type.php' );
@@ -166,12 +164,10 @@ add_action( 'customize_register', 'bones_theme_customizer' );
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
 
-  global $string_domain;
-
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', $string_domain ),
-		'description' => __( 'The first (primary) sidebar.', $string_domain ),
+		'name' => __( 'Sidebar 1', 'ip' ),
+		'description' => __( 'The first (primary) sidebar.', 'ip' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -188,8 +184,8 @@ function bones_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', $string_domain ),
-		'description' => __( 'The second (secondary) sidebar.', $string_domain ),
+		'name' => __( 'Sidebar 2', 'ip' ),
+		'description' => __( 'The second (secondary) sidebar.', 'ip' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -226,13 +222,13 @@ function bones_comments( $comment, $args, $depth ) {
         ?>
         <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
         <?php // end custom gravatar call ?>
-        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', $string_domain ), get_comment_author_link(), edit_comment_link(__( '(Edit)', $string_domain ),'  ','') ) ?>
-        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', $string_domain )); ?> </a></time>
+        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'ip' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'ip' ),'  ','') ) ?>
+        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'ip' )); ?> </a></time>
 
       </header>
       <?php if ($comment->comment_approved == '0') : ?>
         <div class="alert alert-info">
-          <p><?php _e( 'Your comment is awaiting moderation.', $string_domain ) ?></p>
+          <p><?php _e( 'Your comment is awaiting moderation.', 'ip' ) ?></p>
         </div>
       <?php endif; ?>
       <section class="comment_content cf">
@@ -450,7 +446,7 @@ function brief_increase_upload( $bytes )
 //         'container'      => 'content-grid',
 //         'wrapper'        => false,
 //         'render'         => 'show_work_item',
-//         'posts_per_page' => 10
+//         'posts_per_page' => 5
 //     ) );
 // }
 // add_action( 'after_setup_theme', 'ip_infinite_scroll_init' );
@@ -464,7 +460,6 @@ function brief_increase_upload( $bytes )
 //     }
 //   endif;
 // }
-
 
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

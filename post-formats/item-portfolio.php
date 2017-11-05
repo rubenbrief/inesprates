@@ -19,11 +19,7 @@ foreach ($terms as $categoria) {
         </div>
     </div>
 
-    <!--<a href="#" class="eye" title="<?php _e('Já viste este?','ip');?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/eye.png">
-    </a>-->
     <div class="projet-img">
         <?php echo get_the_post_thumbnail($post->ID,'img-400');?>
     </div>
-    <!--<div class="visto hide"></div>-->
 </div>

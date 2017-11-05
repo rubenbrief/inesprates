@@ -1,12 +1,11 @@
-<?php get_header();
-global $string_domain;?>
+<?php get_header();?>
 
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
 
 					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-						<h1 class="archive-title"><span><?php _e( 'Search Results for:', $string_domain ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'ip' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -17,7 +16,7 @@ global $string_domain;?>
 									<h3 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
                   						<p class="byline entry-meta vcard">
-                    							<?php printf( __( 'Posted %1$s by %2$s', $string_domain ),
+                    							<?php printf( __( 'Posted %1$s by %2$s', 'ip' ),
                    							    /* the time the post was published */
                    							    '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
                       							    /* the author of the post */
@@ -28,17 +27,17 @@ global $string_domain;?>
 								</header>
 
 								<section class="entry-content">
-										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', $string_domain ) . '</span>' ); ?>
+										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'ip' ) . '</span>' ); ?>
 
 								</section>
 
 								<footer class="article-footer">
 
 									<?php if(get_the_category_list(', ') != ''): ?>
-                  					<?php printf( __( 'Filed under: %1$s', $string_domain ), get_the_category_list(', ') ); ?>
+                  					<?php printf( __( 'Filed under: %1$s', 'ip' ), get_the_category_list(', ') ); ?>
                   					<?php endif; ?>
 
-                 					<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', $string_domain ) . '</span> ', ', ', '</p>' ); ?>
+                 					<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'ip' ) . '</span> ', ', ', '</p>' ); ?>
 
 								</footer> <!-- end article footer -->
 
@@ -52,13 +51,13 @@ global $string_domain;?>
 
 									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
-											<h1><?php _e( 'Sorry, No Results.', $string_domain ); ?></h1>
+											<h1><?php _e( 'Sorry, No Results.', 'ip' ); ?></h1>
 										</header>
 										<section class="entry-content">
-											<p><?php _e( 'Try your search again.', $string_domain ); ?></p>
+											<p><?php _e( 'Try your search again.', 'ip' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the search.php template.', $string_domain ); ?></p>
+												<p><?php _e( 'This is the error message in the search.php template.', 'ip' ); ?></p>
 										</footer>
 									</article>
 

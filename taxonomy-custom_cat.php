@@ -12,8 +12,7 @@
 */
 ?>
 
-<?php get_header();
-global $string_domain;?>
+<?php get_header();?>
 
 			<div id="content">
 
@@ -21,7 +20,7 @@ global $string_domain;?>
 
 						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<h1 class="archive-title h2"><span><?php _e( 'Posts Categorized:', $string_domain ); ?></span> <?php single_cat_title(); ?></h1>
+							<h1 class="archive-title h2"><span><?php _e( 'Posts Categorized:', 'ip' ); ?></span> <?php single_cat_title(); ?></h1>
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -31,13 +30,13 @@ global $string_domain;?>
 
 									<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 									<p class="byline vcard"><?php
-										printf(__('Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', $string_domain), get_the_time('Y-m-j'), get_the_time(__('F jS, Y', $string_domain)), bones_get_the_author_posts_link(), get_the_term_list( get_the_ID(), 'custom_cat', "", ", ", "" ));
+										printf(__('Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'ip'), get_the_time('Y-m-j'), get_the_time(__('F jS, Y', 'ip')), bones_get_the_author_posts_link(), get_the_term_list( get_the_ID(), 'custom_cat', "", ", ", "" ));
 									?></p>
 
 								</header>
 
 								<section class="entry-content">
-									<?php the_excerpt( '<span class="read-more">' . __( 'Read More &raquo;', $string_domain ) . '</span>' ); ?>
+									<?php the_excerpt( '<span class="read-more">' . __( 'Read More &raquo;', 'ip' ) . '</span>' ); ?>
 
 								</section>
 
@@ -55,13 +54,13 @@ global $string_domain;?>
 
 									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', $string_domain ); ?></h1>
+											<h1><?php _e( 'Oops, Post Not Found!', 'ip' ); ?></h1>
 										</header>
 										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', $string_domain ); ?></p>
+											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'ip' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the taxonomy-custom_cat.php template.', $string_domain ); ?></p>
+												<p><?php _e( 'This is the error message in the taxonomy-custom_cat.php template.', 'ip' ); ?></p>
 										</footer>
 									</article>
 

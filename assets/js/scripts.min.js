@@ -14,24 +14,6 @@
 		home: {
 		    init: function() {
 		      	// JS here
-				// $grid = $('#content-grid').packery({
-				// 		// options
-				// 		itemSelector: '.grid-item',
-				// 		gutter: 10
-				// 	});
-
-				// $grid.find('.grid-item').each( function( i, gridItem ) {
-				// var draggie = new Draggabilly( gridItem );
-				// // bind drag events to Packery
-				// $grid.packery( 'bindDraggabillyEvents', draggie );
-				// });
-
-				// $grid.on( 'click', '.grid-item .close', function( event ) {
-				// // remove clicked element
-				// $grid.packery( 'remove',  $(event.currentTarget).parent() )
-				// 	// shiftLayout remaining item elements
-				// 	.packery('shiftLayout');
-				// });
 				
 
 				//open projects

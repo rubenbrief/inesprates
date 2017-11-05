@@ -22,11 +22,11 @@
 
                   <p class="byline entry-meta vcard">
 
-                    <?php printf( __( 'Posted', $string_domain ).' %1$s %2$s',
+                    <?php printf( __( 'Posted', 'ip' ).' %1$s %2$s',
                        /* the time the post was published */
                        '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
                        /* the author of the post */
-                       '<span class="by">'.__( 'by', $string_domain ).'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+                       '<span class="by">'.__( 'by', 'ip' ).'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
                     ); ?>
 
                   </p>
@@ -51,7 +51,7 @@
                      *
                     */
                     wp_link_pages( array(
-                      'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', $string_domain ) . '</span>',
+                      'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'ip' ) . '</span>',
                       'after'       => '</div>',
                       'link_before' => '<span>',
                       'link_after'  => '</span>',
@@ -61,9 +61,9 @@
 
                 <footer class="article-footer">
 
-                  <?php printf( __( 'filed under', $string_domain ).': %1$s', get_the_category_list(', ') ); ?>
+                  <?php printf( __( 'filed under', 'ip' ).': %1$s', get_the_category_list(', ') ); ?>
 
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', $string_domain ) . '</span> ', ', ', '</p>' ); ?>
+                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'ip' ) . '</span> ', ', ', '</p>' ); ?>
 
                 </footer> <?php // end article footer ?>
 
